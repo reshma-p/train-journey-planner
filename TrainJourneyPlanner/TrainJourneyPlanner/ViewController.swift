@@ -27,5 +27,23 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("searching for \(searchText)")
+        
+        if(searchText.count > 3){
+            SearchServiceClient().fetchStopPoints(searchString: searchText, delegate: self)
+        }
+        
     }
+}
+
+// - MARK: Search result delegate
+extension ViewController: SearchDelegate{
+    func onSuccess(searchResult: SearchResult) {
+        print("Onsuccess --- yay!! \(searchResult.matches.count)")
+    }
+    
+    func onFailure(error: NetworkError) {
+        print("onFailure")
+    }
+    
+    
 }

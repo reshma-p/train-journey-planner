@@ -12,6 +12,10 @@
 		4EBFE5F1232AEE9900DD81DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5EF232AEE9900DD81DB /* Main.storyboard */; };
 		4EBFE5F3232AEE9900DD81DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */; };
 		4EBFE5F6232AEE9900DD81DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */; };
+		4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */; };
+		4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE602232AF4A100DD81DB /* StopPoint.swift */; };
+		4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
+		4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EBFE5F5232AEE9900DD81DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EBFE5F7232AEE9900DD81DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4EBFE602232AF4A100DD81DB /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
+		4EBFE603232AF4A100DD81DB /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		4EBFE606232AF64E00DD81DB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		4EBFE5EA232AEE9900DD81DB /* TrainJourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				4EBFE601232AF49600DD81DB /* DTOs */,
+				4EBFE5FD232AF41700DD81DB /* Model */,
 				4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */,
 				4EBFE5ED232AEE9900DD81DB /* ViewController.swift */,
 				4EBFE5EF232AEE9900DD81DB /* Main.storyboard */,
@@ -62,6 +72,32 @@
 				4EBFE5F7232AEE9900DD81DB /* Info.plist */,
 			);
 			path = TrainJourneyPlanner;
+			sourceTree = "<group>";
+		};
+		4EBFE5FD232AF41700DD81DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EBFE5FE232AF45300DD81DB /* Service */,
+				4EBFE606232AF64E00DD81DB /* SearchService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EBFE5FE232AF45300DD81DB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4EBFE601232AF49600DD81DB /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				4EBFE603232AF4A100DD81DB /* SearchResult.swift */,
+				4EBFE602232AF4A100DD81DB /* StopPoint.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */,
 				4EBFE5EE232AEE9900DD81DB /* ViewController.swift in Sources */,
+				4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */,
+				4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */,
+				4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */,
 				4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
