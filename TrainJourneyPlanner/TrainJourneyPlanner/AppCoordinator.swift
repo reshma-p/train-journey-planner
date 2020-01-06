@@ -32,7 +32,7 @@ class AppCoordinator: Coordinator {
         guard let window = window else {
             return
         }
-        window.rootViewController = rootViewController
+        window.rootViewController = UIStoryboard(name: "Login", bundle: Bundle.main).instantiateInitialViewController()
         window.makeKeyAndVisible()
     }
     
