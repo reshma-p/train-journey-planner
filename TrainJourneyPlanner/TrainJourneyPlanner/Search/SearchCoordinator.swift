@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class SearchCoordinator: Coordinator, Scene {
+    var rootViewController: UINavigationController
+    
     var childCoordinators: [Coordinator] = []
     
     func start() {
@@ -20,12 +22,14 @@ class SearchCoordinator: Coordinator, Scene {
         
     }
     
-    
-    var storyboard: UIStoryboard = UIStoryboard(name: "Search", bundle: Bundle?)
+    init(rootViewController: UINavigationController){
+        self.rootViewController = rootViewController
+    }
+    var storyboard: UIStoryboard = UIStoryboard(name: "Search", bundle: Bundle.main)
     
     var rootNavigationController: UINavigationController {
         let navVC = UINavigationController()
-        navVC.tabBarItem = .search
+//        navVC.tabBarItem = .search
         return navVC
     }
     

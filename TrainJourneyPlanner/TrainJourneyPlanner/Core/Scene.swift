@@ -10,8 +10,5 @@ import Foundation
 import UIKit
 
 protocol Scene {
-    
     var storyboard: UIStoryboard { get }
-    
-    var rootNavigationController: UINavigationController { get }
 }
