@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol Scene {
-    var storyboard: UIStoryboard { get }
+    static var storyboard: UIStoryboard { get }
 }

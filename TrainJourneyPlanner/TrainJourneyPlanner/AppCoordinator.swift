@@ -32,8 +32,12 @@ class AppCoordinator: Coordinator {
         guard let window = window else {
             return
         }
-        window.rootViewController = UIStoryboard(name: "Login", bundle: Bundle.main).instantiateInitialViewController()
+        window.rootViewController = SearchCoordinator.initialViewController
         window.makeKeyAndVisible()
+        
+        var searchCoordinator = SearchCoordinator(rootViewController: rootViewController)
+        self.addChildCoordinator(searchCoordinator)
+        searchCoordinator.start()
     }
     
     func finish() {
