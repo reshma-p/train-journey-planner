@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 protocol Scene {
     static var storyboard: UIStoryboard { get }
 }
