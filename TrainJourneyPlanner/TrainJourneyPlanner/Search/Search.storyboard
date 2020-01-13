@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1c0-Yn-AXM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1c0-Yn-AXM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,8 +60,9 @@
                             <constraint firstItem="L6j-nK-dpM" firstAttribute="bottom" secondItem="zJW-yD-4u6" secondAttribute="bottom" constant="20" id="Jrj-Us-qIZ"/>
                             <constraint firstItem="LwE-3C-ba4" firstAttribute="leading" secondItem="L6j-nK-dpM" secondAttribute="leading" constant="9" id="UzF-mW-JxP"/>
                             <constraint firstItem="zJW-yD-4u6" firstAttribute="top" secondItem="LwE-3C-ba4" secondAttribute="bottom" constant="10" id="Wo5-cO-In0"/>
-                            <constraint firstItem="zJW-yD-4u6" firstAttribute="leading" secondItem="L6j-nK-dpM" secondAttribute="leading" constant="10" id="kzf-Z4-mzg"/>
+                            <constraint firstItem="zJW-yD-4u6" firstAttribute="leading" secondItem="L6j-nK-dpM" secondAttribute="leading" constant="10" id="dvw-he-8B5"/>
                             <constraint firstItem="LwE-3C-ba4" firstAttribute="top" secondItem="L6j-nK-dpM" secondAttribute="top" constant="60" id="l2f-ES-GfZ"/>
+                            <constraint firstItem="zJW-yD-4u6" firstAttribute="centerX" secondItem="L6j-nK-dpM" secondAttribute="centerX" id="zWV-bY-6L2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L6j-nK-dpM"/>
                     </view>
