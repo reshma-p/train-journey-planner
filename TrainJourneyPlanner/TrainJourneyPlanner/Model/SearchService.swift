@@ -53,50 +53,7 @@ class SearchServiceClient: SearchService{
                 delegate.onFailure(error: NetworkError.RequestFailed(error))
             }
         }
-        
-//
-//        if let urlComponents = URLComponents(string: urlString) {
-//            guard let url = urlComponents.url else { return }
-//
-//            var urlRequest = URLRequest(url: url)
-//            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//
-//
-//            urlRequest.httpMethod = "Get"
-//
-//            let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-//
-//                if error != nil {
-//                    print("Error : \(String(describing: error))")
-//                } else if let data = data,
-//                    let response = response as? HTTPURLResponse,
-//                    response.statusCode == 200 {
-//
-//                    if let utf8Representation = String(data: data, encoding: .utf8) {
-//                        print("response: ", utf8Representation)
-//                    } else {
-//                        print("no readable data received in response")
-//                    }
-//                }else{
-//                    print("generic issue")
-//                    //                    // TODO :   1) Handle retries for server errors 5xx
-//                    //                    //          2) Most of the 4xx errors shouldnt be retried, instead would require an action by us
-//                    //                    //          3) What other errors should we look into handling retries for ?
-//                    //                    if let response = response as? HTTPURLResponse{
-//                    //                        delegate.onFailure(NetworkError.RequestFailedWithStatusCode(response.statusCode),response)
-//                    //                    }else{
-//                    //                        // Since Response is empty, returning the appropriate Error in this case.
-//                    //                        delegate.onFailure(NetworkError.RequestFailedNoResponse,nil)
-//                    //                    }
-//                }
-//            }
-//            dataTask.resume()
-        
     }
-    
-    
-    
-    
 }
 
 

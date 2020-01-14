@@ -20,6 +20,7 @@
 		4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE602232AF4A100DD81DB /* StopPoint.swift */; };
 		4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
 		4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
+		4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA32DB23CE883800674664 /* SearchViewModel.swift */; };
 		AB700AB502AE82AE45253700 /* Pods_TrainJourneyPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC37A0616C5216ABF1CC37 /* Pods_TrainJourneyPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		4EBFE602232AF4A100DD81DB /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		4EBFE603232AF4A100DD81DB /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		4EBFE606232AF64E00DD81DB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		4EEA32DB23CE883800674664 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		64BC37A0616C5216ABF1CC37 /* Pods_TrainJourneyPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainJourneyPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75F2E34211F7E70BA24AD99 /* Pods-TrainJourneyPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainJourneyPlanner.release.xcconfig"; path = "Target Support Files/Pods-TrainJourneyPlanner/Pods-TrainJourneyPlanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				4E550F8723C3E9E300B0463A /* Search.storyboard */,
 				4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */,
 				4E10620D23C68F3600A732E4 /* SearchViewController.swift */,
+				4EEA32DB23CE883800674664 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */,
 				4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */,
 				4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */,
 				4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */,

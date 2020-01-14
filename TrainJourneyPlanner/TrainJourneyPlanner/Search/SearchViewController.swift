@@ -9,16 +9,17 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
+    
+    // MARK: Member properties
+    private(set) var viewModel : SearchViewModelProtocol?
+    
+    // MARK: UI outlets
     @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var targetTextField: UITextField!
     @IBOutlet weak var searchTableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
+    // MARK: UI Action methods
     @IBAction func onSourceTextValueChange(_ sender: UITextField) {
         print("source value : \(sender.text)")
     }
@@ -27,4 +28,15 @@ class SearchViewController: UIViewController {
         print("target value : \(sender.text)")
     }
     
+    // MARK: Lifecycle methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    // MARK: Member functions
+    func setup(with viewModel: SearchViewModelProtocol) {
+        self.viewModel = viewModel
+    }
 }
