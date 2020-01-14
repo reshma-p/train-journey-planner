@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol SearchViewModelProtocol {
+protocol SearchViewModelType {
     func fetchStopPoints() -> SearchResult
 }
 
-class SearchViewModel: SearchViewModelProtocol { 
+class SearchViewModel: SearchViewModelType {
     
     private(set) var searchService : SearchService
     

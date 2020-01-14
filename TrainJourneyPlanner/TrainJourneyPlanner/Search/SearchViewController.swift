@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     
     
     // MARK: Member properties
-    private(set) var viewModel : SearchViewModelProtocol?
+    private(set) var viewModel : SearchViewModelType?
     
     // MARK: UI outlets
     @IBOutlet weak var sourceTextField: UITextField!
@@ -36,7 +36,7 @@ class SearchViewController: UIViewController {
     }
     
     // MARK: Member functions
-    func setup(with viewModel: SearchViewModelProtocol) {
+    func setup(with viewModel: SearchViewModelType) {
         self.viewModel = viewModel
     }
 }
