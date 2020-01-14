@@ -26,6 +26,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onSourceTextValueChange:" destination="1c0-Yn-AXM" eventType="editingChanged" id="4Ck-jw-BML"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5k-ag-0k6">
                                         <rect key="frame" x="5" y="90" width="290" height="40"/>
@@ -34,6 +37,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onTargetTextValueChange:" destination="1c0-Yn-AXM" eventType="editingChanged" id="sK8-2t-B4h"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +72,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L6j-nK-dpM"/>
                     </view>
+                    <connections>
+                        <outlet property="searchTableView" destination="zJW-yD-4u6" id="XDe-OS-xfd"/>
+                        <outlet property="sourceTextField" destination="LKe-8T-3NF" id="5b5-Il-GGO"/>
+                        <outlet property="targetTextField" destination="p5k-ag-0k6" id="RYX-yk-agj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZZ-4r-CR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

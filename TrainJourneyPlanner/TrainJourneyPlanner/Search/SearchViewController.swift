@@ -9,22 +9,22 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    @IBOutlet weak var sourceTextField: UITextField!
+    @IBOutlet weak var targetTextField: UITextField!
+    @IBOutlet weak var searchTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onSourceTextValueChange(_ sender: UITextField) {
+        print("source value : \(sender.text)")
     }
-    */
-
+    
+    @IBAction func onTargetTextValueChange(_ sender: UITextField) {
+        print("target value : \(sender.text)")
+    }
+    
 }
