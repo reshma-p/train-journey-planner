@@ -15,7 +15,7 @@ class AppCoordinator: Coordinator {
     //MARK: Properties
     var window: UIWindow?
     
-    lazy var rootViewController: UINavigationController = {
+    lazy var rootNavigationController: UINavigationController = {
         return UINavigationController(rootViewController: UIViewController())
     }()
     
@@ -29,13 +29,14 @@ class AppCoordinator: Coordinator {
     
     func start() {
     
-        guard let window = window else {
+        guard let window = window, let rootViewController = SearchCoordinator.initialViewController else {
             return
         }
-        window.rootViewController = SearchCoordinator.initialViewController
+        
+        window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         
-        var searchCoordinator = SearchCoordinator(rootViewController: rootViewController)
+        var searchCoordinator = SearchCoordinator(rootViewController: rootViewController, rootNavigationController: rootNavigationController)
         self.addChildCoordinator(searchCoordinator)
         searchCoordinator.start()
     }

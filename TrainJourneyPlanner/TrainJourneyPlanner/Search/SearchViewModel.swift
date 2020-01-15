@@ -9,10 +9,30 @@
 import Foundation
 
 protocol SearchViewModelType {
-    func fetchStopPoints() -> SearchResult
+    var viewDelegate: SearchViewModelViewDelegate? { get set }
+    
+    
+    // MARK: Events
+    func onSourceTextValueChange(textValue: String)
 }
 
+protocol SearchViewModelViewDelegate: class {
+    
+    func showResult(_ searchResult: SearchResult)
+    func showErrorAlert(_ error: String)
+}
+
+
 class SearchViewModel: SearchViewModelType {
+    func onSourceTextValueChange(textValue: String) {
+        if(textValue.count >= 3){
+            searchService.fetchStopPoints(searchString: textValue, delegate: self)
+        }
+    }
+    
+    
+    
+    weak var viewDelegate: SearchViewModelViewDelegate?
     
     private(set) var searchService : SearchService
     
@@ -22,7 +42,17 @@ class SearchViewModel: SearchViewModelType {
     func fetchStopPoints() -> SearchResult {
         return SearchResult(matches: [StopPoint(name: "xxx", modes: [""])])
     }
+}
+
+
+extension SearchViewModel: SearchDelegate{
+    func onSuccess(searchResult: SearchResult) {
+        viewDelegate?.showResult(searchResult)
+    }
     
+    func onFailure(error: NetworkError) {
+        viewDelegate?.showErrorAlert(error.localizedDescription)
+    }
     
     
 }

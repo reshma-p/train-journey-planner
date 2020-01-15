@@ -21,7 +21,7 @@ class SearchViewController: UIViewController {
     
     // MARK: UI Action methods
     @IBAction func onSourceTextValueChange(_ sender: UITextField) {
-        print("source value : \(sender.text)")
+        viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
     }
     
     @IBAction func onTargetTextValueChange(_ sender: UITextField) {
@@ -38,5 +38,19 @@ class SearchViewController: UIViewController {
     // MARK: Member functions
     func setup(with viewModel: SearchViewModelType) {
         self.viewModel = viewModel
+        self.viewModel?.viewDelegate = self
     }
 }
+
+extension SearchViewController: SearchViewModelViewDelegate {
+    func showResult(_ searchResult: SearchResult) {
+        print(" Matches : \(searchResult.matches)")
+    }
+    
+    func showErrorAlert(_ error: String) {
+        print(" ERROR : \(error)")
+    }
+    
+    
+}
+

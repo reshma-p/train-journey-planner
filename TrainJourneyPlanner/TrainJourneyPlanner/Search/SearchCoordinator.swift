@@ -18,17 +18,27 @@ class SearchCoordinator: Coordinator, Scene {
         return storyboard.instantiateInitialViewController()
     }
     
-    init(rootViewController: UINavigationController){
+    init(rootViewController: UIViewController, rootNavigationController: UINavigationController){
         self.rootViewController = rootViewController
+        self.rootNavigationController = rootNavigationController
+        
     }
     
     // MARK: Coordinator implementation
-    var rootViewController: UINavigationController
+    var rootNavigationController: UINavigationController
+    var rootViewController: UIViewController
     
     var childCoordinators: [Coordinator] = []
     
     func start() {
+        guard let viewController = rootViewController as? SearchViewController else {
+            assertionFailure("Attempt to start the SearchCoordinator with incorrect rootViewController => \(rootViewController)")
+            return
+        }
         
+        let searchService = SearchServiceClient()
+        let searchViewModel = SearchViewModel(searchService: searchService)
+        viewController.setup(with: searchViewModel)
     }
     
     func finish() {
