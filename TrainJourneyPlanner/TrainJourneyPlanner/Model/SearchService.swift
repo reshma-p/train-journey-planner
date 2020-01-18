@@ -9,31 +9,14 @@
 import Foundation
 
 
-/**
- The protocol for the Search Service.
- */
-protocol SearchService{
-    func fetchStopPoints<T:SearchDelegate>(searchString: String, delegate: T)
-}
-
-/**
- The protocol for the Post delegate.
- */
-protocol SearchDelegate{
-    func onSuccess(searchResult: SearchResult)
-    func onFailure(error: NetworkError)
-}
-
-
-/**
- - The service is responsible to fetch the stop points data
- */
-class SearchServiceClient: SearchService{
+/// The service is responsible to fetch the stop points data
+class SearchService: SearchServiceType{
+    
+    let host = "https://api.tfl.gov.uk"
+    
     func fetchStopPoints<T>(searchString: String, delegate: T) where T : SearchDelegate {
-//        let urlString = "https://api.tfl.gov.uk/StopPoint/Search/\(searchString)"
         
-        guard let urlVal = URL(string:"https://api.tfl.gov.uk/StopPoint/Search/\(searchString)") else { return }
-        
+        guard let urlVal = URL(string:"\(host)/StopPoint/Search/\(searchString)") else { return }
         
         Network.get(to: urlVal) { completion in
             

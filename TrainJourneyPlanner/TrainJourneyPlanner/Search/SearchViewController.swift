@@ -35,7 +35,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         self.searchTableView.dataSource = searchTableDataSource
-        // Do any additional setup after loading the view.
     }
     
     // MARK: Member functions
@@ -45,7 +44,11 @@ class SearchViewController: UIViewController {
     }
 }
 
+// MARK: Extension : SearchViewModelViewDelegate
+
+
 extension SearchViewController: SearchViewModelViewDelegate {
+    
     func showResult(_ searchResult: SearchResult) {
         print(" Matches : \(searchResult.matches)")
         self.searchTableDataSource.updateData(data: searchResult.matches)
@@ -57,29 +60,4 @@ extension SearchViewController: SearchViewModelViewDelegate {
     func showErrorAlert(_ error: String) {
         print(" ERROR : \(error)")
     }
-}
-
-class SearchTableDataSource: NSObject, UITableViewDataSource {
-    
-    var data: [StopPoint] = []
-    
-    func updateData(data: [StopPoint]){
-        self.data = data
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StopPointsCell") else {
-            fatalError("No cell class has been registered for StopPointsCell")
-        }
-        cell.textLabel?.text = data[indexPath.item].name
-        return cell
-    }
-    
-   
-    
-    
 }

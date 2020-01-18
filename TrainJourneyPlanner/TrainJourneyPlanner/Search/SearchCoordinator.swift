@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// Responsible to coordinate between the Viewmodel and View
 class SearchCoordinator: Coordinator, Scene {
     
     // MARK: Static properties
@@ -36,7 +37,7 @@ class SearchCoordinator: Coordinator, Scene {
             return
         }
         
-        let searchService = SearchServiceClient()
+        let searchService = SearchService()
         let searchViewModel = SearchViewModel(searchService: searchService)
         viewController.setup(with: searchViewModel)
     }
@@ -44,7 +45,4 @@ class SearchCoordinator: Coordinator, Scene {
     func finish() {
         
     }
-    
-    
-    
 }

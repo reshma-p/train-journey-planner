@@ -19,14 +19,14 @@ class SearchViewModelTest: XCTestCase {
     func testFetchDataSuccess(){
         
     }
-    
-    class SearchServiceMock: SearchService {
-        func fetchStopPoints<T>(searchString: String,delegate: T) where T : SearchDelegate {
-            print("fetchStopr points ")
-        }
-        
-        
-    }
+//
+//    class SearchServiceMock: SearchService {
+//        func fetchStopPoints<T>(searchString: String,delegate: T) where T : SearchDelegate {
+//            print("fetchStopr points ")
+//        }
+//
+//
+//    }
 }
 
 

@@ -8,40 +8,29 @@
 
 import Foundation
 
-protocol SearchViewModelType {
-    var viewDelegate: SearchViewModelViewDelegate? { get set }
-    
-    
-    // MARK: Events
-    func onSourceTextValueChange(textValue: String)
-}
-
-protocol SearchViewModelViewDelegate: class {
-    
-    func showResult(_ searchResult: SearchResult)
-    func showErrorAlert(_ error: String)
-}
-
-
 class SearchViewModel: SearchViewModelType {
+    
+    // MARK: Properties
+    private(set) var searchService : SearchServiceType
+    weak var viewDelegate: SearchViewModelViewDelegate?
+    
+    // MARK: Initialiser
+    init(searchService: SearchServiceType) {
+        self.searchService = searchService
+    }
+    
+    
+    // MARK: Member functions
+    
     func onSourceTextValueChange(textValue: String) {
         if(textValue.count >= 3){
             searchService.fetchStopPoints(searchString: textValue, delegate: self)
         }
     }
-    
-    
-    
-    weak var viewDelegate: SearchViewModelViewDelegate?
-    
-    private(set) var searchService : SearchService
-    
-    init(searchService: SearchService) {
-        self.searchService = searchService
-    }
 }
 
 
+// MARK: Extension : SearchDelegate
 extension SearchViewModel: SearchDelegate{
     func onSuccess(searchResult: SearchResult) {
         viewDelegate?.showResult(searchResult)

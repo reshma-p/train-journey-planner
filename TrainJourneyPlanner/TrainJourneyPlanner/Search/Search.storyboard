@@ -52,7 +52,6 @@
                                     <constraint firstItem="LKe-8T-3NF" firstAttribute="leading" secondItem="LwE-3C-ba4" secondAttribute="leading" constant="5" id="CKB-7G-N5S"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="CSb-UU-fHt"/>
                                     <constraint firstItem="p5k-ag-0k6" firstAttribute="top" secondItem="LKe-8T-3NF" secondAttribute="bottom" constant="40" id="RTg-WV-qeU"/>
-                                    <constraint firstAttribute="width" constant="300" id="TrV-qa-dKl"/>
                                     <constraint firstAttribute="trailing" secondItem="p5k-ag-0k6" secondAttribute="trailing" constant="5" id="hg3-pe-chw"/>
                                 </constraints>
                             </view>
@@ -60,10 +59,10 @@
                                 <rect key="frame" x="10" y="254" width="394" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StopPointsCell" id="L3L-on-Wpx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StopPointsCell" id="Xcr-Kd-dbj">
                                         <rect key="frame" x="0.0" y="28" width="394" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L3L-on-Wpx" id="Tg9-rW-AZo">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xcr-Kd-dbj" id="DCK-og-GA9">
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>

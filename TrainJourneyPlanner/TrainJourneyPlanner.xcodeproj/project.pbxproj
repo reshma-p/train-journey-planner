@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10620D23C68F3600A732E4 /* SearchViewController.swift */; };
+		4E22AFE223D36D8C004E2DE9 /* SearchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */; };
+		4E22AFE423D36EB1004E2DE9 /* SearchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22AFE323D36EB1004E2DE9 /* SearchServiceType.swift */; };
+		4E22AFE623D36FD1004E2DE9 /* SearchTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */; };
 		4E550F8223C3DEAF00B0463A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8123C3DEAF00B0463A /* Coordinator.swift */; };
 		4E550F8523C3DF1100B0463A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8423C3DF1100B0463A /* AppCoordinator.swift */; };
 		4E550F8823C3E9E400B0463A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E550F8723C3E9E300B0463A /* Search.storyboard */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		08A863607976A198F48D08DE /* Pods-TrainJourneyPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainJourneyPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TrainJourneyPlanner/Pods-TrainJourneyPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		4E10620D23C68F3600A732E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelProtocol.swift; sourceTree = "<group>"; };
+		4E22AFE323D36EB1004E2DE9 /* SearchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceType.swift; sourceTree = "<group>"; };
+		4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableDataSource.swift; sourceTree = "<group>"; };
 		4E550F8123C3DEAF00B0463A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4E550F8423C3DF1100B0463A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4E550F8723C3E9E300B0463A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,8 @@
 				4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */,
 				4E10620D23C68F3600A732E4 /* SearchViewController.swift */,
 				4EEA32DB23CE883800674664 /* SearchViewModel.swift */,
+				4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */,
+				4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			children = (
 				4EBFE5FE232AF45300DD81DB /* Service */,
 				4EBFE606232AF64E00DD81DB /* SearchService.swift */,
+				4E22AFE323D36EB1004E2DE9 /* SearchServiceType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,9 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E22AFE223D36D8C004E2DE9 /* SearchViewModelProtocol.swift in Sources */,
 				4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */,
 				4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */,
+				4E22AFE623D36FD1004E2DE9 /* SearchTableDataSource.swift in Sources */,
 				4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */,
+				4E22AFE423D36EB1004E2DE9 /* SearchServiceType.swift in Sources */,
 				4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */,
 				4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */,
 				4E550F8523C3DF1100B0463A /* AppCoordinator.swift in Sources */,
