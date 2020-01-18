@@ -39,9 +39,6 @@ class SearchViewModel: SearchViewModelType {
     init(searchService: SearchService) {
         self.searchService = searchService
     }
-    func fetchStopPoints() -> SearchResult {
-        return SearchResult(matches: [StopPoint(name: "xxx", modes: [""])])
-    }
 }
 
 

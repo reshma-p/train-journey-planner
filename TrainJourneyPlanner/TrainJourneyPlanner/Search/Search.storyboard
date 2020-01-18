@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwE-3C-ba4">
-                                <rect key="frame" x="9" y="104" width="300" height="140"/>
+                                <rect key="frame" x="9" y="104" width="395" height="140"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-8T-3NF">
-                                        <rect key="frame" x="5" y="10" width="290" height="40"/>
+                                        <rect key="frame" x="5" y="10" width="385" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="EhG-Ah-Y02"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5k-ag-0k6">
-                                        <rect key="frame" x="5" y="90" width="290" height="40"/>
+                                        <rect key="frame" x="5" y="90" width="385" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Eys-qR-XQg"/>
                                         </constraints>
@@ -50,6 +50,7 @@
                                     <constraint firstItem="LKe-8T-3NF" firstAttribute="top" secondItem="LwE-3C-ba4" secondAttribute="top" constant="10" id="8tS-EI-eV4"/>
                                     <constraint firstItem="p5k-ag-0k6" firstAttribute="leading" secondItem="LwE-3C-ba4" secondAttribute="leading" constant="5" id="A1O-LE-JEC"/>
                                     <constraint firstItem="LKe-8T-3NF" firstAttribute="leading" secondItem="LwE-3C-ba4" secondAttribute="leading" constant="5" id="CKB-7G-N5S"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="CSb-UU-fHt"/>
                                     <constraint firstItem="p5k-ag-0k6" firstAttribute="top" secondItem="LKe-8T-3NF" secondAttribute="bottom" constant="40" id="RTg-WV-qeU"/>
                                     <constraint firstAttribute="width" constant="300" id="TrV-qa-dKl"/>
                                     <constraint firstAttribute="trailing" secondItem="p5k-ag-0k6" secondAttribute="trailing" constant="5" id="hg3-pe-chw"/>
@@ -58,6 +59,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zJW-yD-4u6">
                                 <rect key="frame" x="10" y="254" width="394" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StopPointsCell" id="L3L-on-Wpx">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L3L-on-Wpx" id="Tg9-rW-AZo">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,6 +78,7 @@
                             <constraint firstItem="LwE-3C-ba4" firstAttribute="leading" secondItem="L6j-nK-dpM" secondAttribute="leading" constant="9" id="UzF-mW-JxP"/>
                             <constraint firstItem="zJW-yD-4u6" firstAttribute="top" secondItem="LwE-3C-ba4" secondAttribute="bottom" constant="10" id="Wo5-cO-In0"/>
                             <constraint firstItem="zJW-yD-4u6" firstAttribute="leading" secondItem="L6j-nK-dpM" secondAttribute="leading" constant="10" id="dvw-he-8B5"/>
+                            <constraint firstItem="L6j-nK-dpM" firstAttribute="trailing" secondItem="LwE-3C-ba4" secondAttribute="trailing" constant="10" id="kX5-2g-5wu"/>
                             <constraint firstItem="LwE-3C-ba4" firstAttribute="top" secondItem="L6j-nK-dpM" secondAttribute="top" constant="60" id="l2f-ES-GfZ"/>
                             <constraint firstItem="zJW-yD-4u6" firstAttribute="centerX" secondItem="L6j-nK-dpM" secondAttribute="centerX" id="zWV-bY-6L2"/>
                         </constraints>

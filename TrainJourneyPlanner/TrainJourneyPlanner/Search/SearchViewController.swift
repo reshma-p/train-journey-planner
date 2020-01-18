@@ -19,6 +19,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var targetTextField: UITextField!
     @IBOutlet weak var searchTableView: UITableView!
     
+    let searchTableDataSource = SearchTableDataSource()
+    
     // MARK: UI Action methods
     @IBAction func onSourceTextValueChange(_ sender: UITextField) {
         viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
@@ -31,7 +33,8 @@ class SearchViewController: UIViewController {
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.searchTableView.dataSource = searchTableDataSource
         // Do any additional setup after loading the view.
     }
     
@@ -45,12 +48,38 @@ class SearchViewController: UIViewController {
 extension SearchViewController: SearchViewModelViewDelegate {
     func showResult(_ searchResult: SearchResult) {
         print(" Matches : \(searchResult.matches)")
+        self.searchTableDataSource.updateData(data: searchResult.matches)
+        DispatchQueue.main.async { [weak self] in
+            self?.searchTableView.reloadData()
+        }
     }
     
     func showErrorAlert(_ error: String) {
         print(" ERROR : \(error)")
     }
+}
+
+class SearchTableDataSource: NSObject, UITableViewDataSource {
+    
+    var data: [StopPoint] = []
+    
+    func updateData(data: [StopPoint]){
+        self.data = data
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StopPointsCell") else {
+            fatalError("No cell class has been registered for StopPointsCell")
+        }
+        cell.textLabel?.text = data[indexPath.item].name
+        return cell
+    }
+    
+   
     
     
 }
-
