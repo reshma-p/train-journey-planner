@@ -7,31 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10620D23C68F3600A732E4 /* SearchViewController.swift */; };
+		4E22AFE223D36D8C004E2DE9 /* SearchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */; };
+		4E22AFE423D36EB1004E2DE9 /* SearchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22AFE323D36EB1004E2DE9 /* SearchServiceType.swift */; };
+		4E22AFE623D36FD1004E2DE9 /* SearchTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */; };
+		4E550F8223C3DEAF00B0463A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8123C3DEAF00B0463A /* Coordinator.swift */; };
+		4E550F8523C3DF1100B0463A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8423C3DF1100B0463A /* AppCoordinator.swift */; };
+		4E550F8823C3E9E400B0463A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E550F8723C3E9E300B0463A /* Search.storyboard */; };
+		4E550F8A23C3EBA100B0463A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8923C3EBA100B0463A /* Scene.swift */; };
+		4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */; };
+		4E638AC723F891C8004E7E09 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC423F891C8004E7E09 /* NetworkManager.swift */; };
+		4E638AC823F891C8004E7E09 /* HttpNetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */; };
+		4E638AC923F891C8004E7E09 /* NetworkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC623F891C8004E7E09 /* NetworkEnum.swift */; };
 		4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */; };
-		4EBFE5EE232AEE9900DD81DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5ED232AEE9900DD81DB /* ViewController.swift */; };
-		4EBFE5F1232AEE9900DD81DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5EF232AEE9900DD81DB /* Main.storyboard */; };
 		4EBFE5F3232AEE9900DD81DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */; };
 		4EBFE5F6232AEE9900DD81DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */; };
-		4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */; };
 		4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE602232AF4A100DD81DB /* StopPoint.swift */; };
 		4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
 		4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
+		4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */; };
+		4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA32DB23CE883800674664 /* SearchViewModel.swift */; };
+		4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10620D23C68F3600A732E4 /* SearchViewController.swift */; };
+		4EDC42C223CFB1BE00AA4D82 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */; };
+		4EDC42C423CFB1D100AA4D82 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
+		4EDC42C523CFB1D900AA4D82 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8423C3DF1100B0463A /* AppCoordinator.swift */; };
+		4EDC42C623CFB24B00AA4D82 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
+		4EDC42C723CFB36900AA4D82 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE602232AF4A100DD81DB /* StopPoint.swift */; };
+		4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA32DB23CE883800674664 /* SearchViewModel.swift */; };
 		AB700AB502AE82AE45253700 /* Pods_TrainJourneyPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC37A0616C5216ABF1CC37 /* Pods_TrainJourneyPlanner.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4EDC42B623CFAF5400AA4D82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EBFE5E0232AEE9900DD81DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBFE5E7232AEE9900DD81DB;
+			remoteInfo = TrainJourneyPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		08A863607976A198F48D08DE /* Pods-TrainJourneyPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainJourneyPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TrainJourneyPlanner/Pods-TrainJourneyPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		4E10620D23C68F3600A732E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelProtocol.swift; sourceTree = "<group>"; };
+		4E22AFE323D36EB1004E2DE9 /* SearchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceType.swift; sourceTree = "<group>"; };
+		4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableDataSource.swift; sourceTree = "<group>"; };
+		4E550F8123C3DEAF00B0463A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4E550F8423C3DF1100B0463A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4E550F8723C3E9E300B0463A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		4E550F8923C3EBA100B0463A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		4E638AC423F891C8004E7E09 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNetworkType.swift; sourceTree = "<group>"; };
+		4E638AC623F891C8004E7E09 /* NetworkEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnum.swift; sourceTree = "<group>"; };
 		4EBFE5E8232AEE9900DD81DB /* TrainJourneyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainJourneyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EBFE5ED232AEE9900DD81DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4EBFE5F0232AEE9900DD81DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EBFE5F5232AEE9900DD81DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EBFE5F7232AEE9900DD81DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4EBFE602232AF4A100DD81DB /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		4EBFE603232AF4A100DD81DB /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		4EBFE606232AF64E00DD81DB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		4EDC42B123CFAF5400AA4D82 /* TrainJourneyPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainJourneyPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EDC42B523CFAF5400AA4D82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModelTest.swift; sourceTree = "<group>"; };
+		4EEA32DB23CE883800674664 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		64BC37A0616C5216ABF1CC37 /* Pods_TrainJourneyPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainJourneyPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75F2E34211F7E70BA24AD99 /* Pods-TrainJourneyPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainJourneyPlanner.release.xcconfig"; path = "Target Support Files/Pods-TrainJourneyPlanner/Pods-TrainJourneyPlanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +83,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB700AB502AE82AE45253700 /* Pods_TrainJourneyPlanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDC42AE23CFAF5400AA4D82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,10 +105,52 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4E550F8023C3DE9500B0463A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4E550F8123C3DEAF00B0463A /* Coordinator.swift */,
+				4E550F8923C3EBA100B0463A /* Scene.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4E550F8623C3E9C900B0463A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4E550F8723C3E9E300B0463A /* Search.storyboard */,
+				4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */,
+				4E10620D23C68F3600A732E4 /* SearchViewController.swift */,
+				4EEA32DB23CE883800674664 /* SearchViewModel.swift */,
+				4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */,
+				4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4E638AC223F89142004E7E09 /* RKfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				4E550F8023C3DE9500B0463A /* Core */,
+				4E638AC323F891C8004E7E09 /* Network */,
+			);
+			path = RKfoundation;
+			sourceTree = "<group>";
+		};
+		4E638AC323F891C8004E7E09 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4E638AC423F891C8004E7E09 /* NetworkManager.swift */,
+				4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */,
+				4E638AC623F891C8004E7E09 /* NetworkEnum.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		4EBFE5DF232AEE9900DD81DB = {
 			isa = PBXGroup;
 			children = (
 				4EBFE5EA232AEE9900DD81DB /* TrainJourneyPlanner */,
+				4EDC42B223CFAF5400AA4D82 /* TrainJourneyPlannerTests */,
 				4EBFE5E9232AEE9900DD81DB /* Products */,
 				1044BF563B7FFFF65005C3FD /* Pods */,
 				F1C29A2891762D5738620A7E /* Frameworks */,
@@ -71,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4EBFE5E8232AEE9900DD81DB /* TrainJourneyPlanner.app */,
+				4EDC42B123CFAF5400AA4D82 /* TrainJourneyPlannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,14 +169,15 @@
 		4EBFE5EA232AEE9900DD81DB /* TrainJourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				4E638AC223F89142004E7E09 /* RKfoundation */,
+				4E550F8623C3E9C900B0463A /* Search */,
 				4EBFE601232AF49600DD81DB /* DTOs */,
 				4EBFE5FD232AF41700DD81DB /* Model */,
 				4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */,
-				4EBFE5ED232AEE9900DD81DB /* ViewController.swift */,
-				4EBFE5EF232AEE9900DD81DB /* Main.storyboard */,
 				4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */,
 				4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */,
 				4EBFE5F7232AEE9900DD81DB /* Info.plist */,
+				4E550F8423C3DF1100B0463A /* AppCoordinator.swift */,
 			);
 			path = TrainJourneyPlanner;
 			sourceTree = "<group>";
@@ -95,6 +187,7 @@
 			children = (
 				4EBFE5FE232AF45300DD81DB /* Service */,
 				4EBFE606232AF64E00DD81DB /* SearchService.swift */,
+				4E22AFE323D36EB1004E2DE9 /* SearchServiceType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,7 +195,6 @@
 		4EBFE5FE232AF45300DD81DB /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -114,6 +206,15 @@
 				4EBFE602232AF4A100DD81DB /* StopPoint.swift */,
 			);
 			path = DTOs;
+			sourceTree = "<group>";
+		};
+		4EDC42B223CFAF5400AA4D82 /* TrainJourneyPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */,
+				4EDC42B523CFAF5400AA4D82 /* Info.plist */,
+			);
+			path = TrainJourneyPlannerTests;
 			sourceTree = "<group>";
 		};
 		F1C29A2891762D5738620A7E /* Frameworks */ = {
@@ -146,18 +247,40 @@
 			productReference = 4EBFE5E8232AEE9900DD81DB /* TrainJourneyPlanner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4EDC42B023CFAF5400AA4D82 /* TrainJourneyPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EDC42BA23CFAF5400AA4D82 /* Build configuration list for PBXNativeTarget "TrainJourneyPlannerTests" */;
+			buildPhases = (
+				4EDC42AD23CFAF5400AA4D82 /* Sources */,
+				4EDC42AE23CFAF5400AA4D82 /* Frameworks */,
+				4EDC42AF23CFAF5400AA4D82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EDC42B723CFAF5400AA4D82 /* PBXTargetDependency */,
+			);
+			name = TrainJourneyPlannerTests;
+			productName = TrainJourneyPlannerTests;
+			productReference = 4EDC42B123CFAF5400AA4D82 /* TrainJourneyPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4EBFE5E0232AEE9900DD81DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = RP;
 				TargetAttributes = {
 					4EBFE5E7232AEE9900DD81DB = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					4EDC42B023CFAF5400AA4D82 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 4EBFE5E7232AEE9900DD81DB;
 					};
 				};
 			};
@@ -175,6 +298,7 @@
 			projectRoot = "";
 			targets = (
 				4EBFE5E7232AEE9900DD81DB /* TrainJourneyPlanner */,
+				4EDC42B023CFAF5400AA4D82 /* TrainJourneyPlannerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +310,14 @@
 			files = (
 				4EBFE5F6232AEE9900DD81DB /* LaunchScreen.storyboard in Resources */,
 				4EBFE5F3232AEE9900DD81DB /* Assets.xcassets in Resources */,
-				4EBFE5F1232AEE9900DD81DB /* Main.storyboard in Resources */,
+				4E550F8823C3E9E400B0463A /* Search.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDC42AF23CFAF5400AA4D82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,26 +370,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */,
-				4EBFE5EE232AEE9900DD81DB /* ViewController.swift in Sources */,
+				4E22AFE223D36D8C004E2DE9 /* SearchViewModelProtocol.swift in Sources */,
+				4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */,
+				4E22AFE623D36FD1004E2DE9 /* SearchTableDataSource.swift in Sources */,
+				4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */,
+				4E22AFE423D36EB1004E2DE9 /* SearchServiceType.swift in Sources */,
 				4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */,
 				4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */,
+				4E550F8523C3DF1100B0463A /* AppCoordinator.swift in Sources */,
 				4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */,
+				4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */,
 				4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */,
+				4E638AC823F891C8004E7E09 /* HttpNetworkType.swift in Sources */,
+				4E638AC723F891C8004E7E09 /* NetworkManager.swift in Sources */,
+				4E550F8223C3DEAF00B0463A /* Coordinator.swift in Sources */,
+				4E638AC923F891C8004E7E09 /* NetworkEnum.swift in Sources */,
+				4E550F8A23C3EBA100B0463A /* Scene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EDC42AD23CFAF5400AA4D82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDC42C223CFB1BE00AA4D82 /* SearchCoordinator.swift in Sources */,
+				4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */,
+				4EDC42C723CFB36900AA4D82 /* StopPoint.swift in Sources */,
+				4EDC42C623CFB24B00AA4D82 /* SearchResult.swift in Sources */,
+				4EDC42C423CFB1D100AA4D82 /* SearchService.swift in Sources */,
+				4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */,
+				4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */,
+				4EDC42C523CFB1D900AA4D82 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		4EBFE5EF232AEE9900DD81DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EBFE5F0232AEE9900DD81DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		4EDC42B723CFAF5400AA4D82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EBFE5E7232AEE9900DD81DB /* TrainJourneyPlanner */;
+			targetProxy = 4EDC42B623CFAF5400AA4D82 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,6 +586,48 @@
 			};
 			name = Release;
 		};
+		4EDC42B823CFAF5400AA4D82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33MSMA6BZU;
+				INFOPLIST_FILE = TrainJourneyPlannerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kurdekar.TrainJourneyPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainJourneyPlanner.app/TrainJourneyPlanner";
+			};
+			name = Debug;
+		};
+		4EDC42B923CFAF5400AA4D82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33MSMA6BZU;
+				INFOPLIST_FILE = TrainJourneyPlannerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kurdekar.TrainJourneyPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainJourneyPlanner.app/TrainJourneyPlanner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -447,6 +645,15 @@
 			buildConfigurations = (
 				4EBFE5FB232AEE9900DD81DB /* Debug */,
 				4EBFE5FC232AEE9900DD81DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EDC42BA23CFAF5400AA4D82 /* Build configuration list for PBXNativeTarget "TrainJourneyPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EDC42B823CFAF5400AA4D82 /* Debug */,
+				4EDC42B923CFAF5400AA4D82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
