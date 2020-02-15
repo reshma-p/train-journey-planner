@@ -45,13 +45,11 @@ class SearchViewController: UIViewController {
 }
 
 // MARK: Extension : SearchViewModelViewDelegate
-
-
 extension SearchViewController: SearchViewModelViewDelegate {
     
-    func showResult(_ searchResult: SearchResult) {
-        print(" Matches : \(searchResult.matches)")
-        self.searchTableDataSource.updateData(data: searchResult.matches)
+    func showResult(_ stopPoints: [StopPoint]) {
+        print(" Matches : \(stopPoints)")
+        self.searchTableDataSource.updateData(data: stopPoints)
         DispatchQueue.main.async { [weak self] in
             self?.searchTableView.reloadData()
         }

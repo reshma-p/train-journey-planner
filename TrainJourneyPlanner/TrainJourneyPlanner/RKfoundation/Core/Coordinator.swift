@@ -1,22 +1,20 @@
 //
 //  Coordinator.swift
-//  TrainJourneyPlanner
+//  roundup-savings
 //
-//  Created by Reshma Pinto on 06/01/2020.
-//  Copyright © 2020 RP. All rights reserved.
+//  Created by Reshma Pinto on 09/02/2020.
+//  Copyright © 2020 Kurdekar. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
+/// Coordinators are responsible for the app navigation for a feature.
+/// They could have more than 1 child coodinator.
 protocol Coordinator: class{
     
-    var rootNavigationController: UINavigationController { get set }
     var childCoordinators: [Coordinator] { get set }
     
     func start()
-    
-    func finish()
     
     func addChildCoordinator(_ coordinator: Coordinator)
     
@@ -26,7 +24,6 @@ protocol Coordinator: class{
     
     func removeAllChildCoordinators()
 }
-
 
 // Coordinator provides a default implementation for managing its child coordinators
 extension Coordinator{

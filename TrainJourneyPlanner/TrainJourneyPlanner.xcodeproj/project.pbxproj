@@ -16,10 +16,12 @@
 		4E550F8823C3E9E400B0463A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E550F8723C3E9E300B0463A /* Search.storyboard */; };
 		4E550F8A23C3EBA100B0463A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8923C3EBA100B0463A /* Scene.swift */; };
 		4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */; };
+		4E638AC723F891C8004E7E09 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC423F891C8004E7E09 /* NetworkManager.swift */; };
+		4E638AC823F891C8004E7E09 /* HttpNetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */; };
+		4E638AC923F891C8004E7E09 /* NetworkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC623F891C8004E7E09 /* NetworkEnum.swift */; };
 		4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */; };
 		4EBFE5F3232AEE9900DD81DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */; };
 		4EBFE5F6232AEE9900DD81DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */; };
-		4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */; };
 		4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE602232AF4A100DD81DB /* StopPoint.swift */; };
 		4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
 		4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
@@ -27,7 +29,6 @@
 		4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA32DB23CE883800674664 /* SearchViewModel.swift */; };
 		4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10620D23C68F3600A732E4 /* SearchViewController.swift */; };
 		4EDC42C223CFB1BE00AA4D82 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */; };
-		4EDC42C323CFB1CF00AA4D82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */; };
 		4EDC42C423CFB1D100AA4D82 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
 		4EDC42C523CFB1D900AA4D82 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8423C3DF1100B0463A /* AppCoordinator.swift */; };
 		4EDC42C623CFB24B00AA4D82 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
@@ -57,12 +58,14 @@
 		4E550F8723C3E9E300B0463A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4E550F8923C3EBA100B0463A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		4E638AC423F891C8004E7E09 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNetworkType.swift; sourceTree = "<group>"; };
+		4E638AC623F891C8004E7E09 /* NetworkEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnum.swift; sourceTree = "<group>"; };
 		4EBFE5E8232AEE9900DD81DB /* TrainJourneyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainJourneyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EBFE5F5232AEE9900DD81DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EBFE5F7232AEE9900DD81DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4EBFE602232AF4A100DD81DB /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		4EBFE603232AF4A100DD81DB /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		4EBFE606232AF64E00DD81DB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
@@ -124,6 +127,25 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		4E638AC223F89142004E7E09 /* RKfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				4E550F8023C3DE9500B0463A /* Core */,
+				4E638AC323F891C8004E7E09 /* Network */,
+			);
+			path = RKfoundation;
+			sourceTree = "<group>";
+		};
+		4E638AC323F891C8004E7E09 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4E638AC423F891C8004E7E09 /* NetworkManager.swift */,
+				4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */,
+				4E638AC623F891C8004E7E09 /* NetworkEnum.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		4EBFE5DF232AEE9900DD81DB = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +169,8 @@
 		4EBFE5EA232AEE9900DD81DB /* TrainJourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				4E638AC223F89142004E7E09 /* RKfoundation */,
 				4E550F8623C3E9C900B0463A /* Search */,
-				4E550F8023C3DE9500B0463A /* Core */,
 				4EBFE601232AF49600DD81DB /* DTOs */,
 				4EBFE5FD232AF41700DD81DB /* Model */,
 				4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */,
@@ -173,7 +195,6 @@
 		4EBFE5FE232AF45300DD81DB /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4EBFE5FF232AF47100DD81DB /* NetworkManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -351,7 +372,6 @@
 			files = (
 				4E22AFE223D36D8C004E2DE9 /* SearchViewModelProtocol.swift in Sources */,
 				4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */,
-				4EBFE600232AF47100DD81DB /* NetworkManager.swift in Sources */,
 				4E22AFE623D36FD1004E2DE9 /* SearchTableDataSource.swift in Sources */,
 				4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */,
 				4E22AFE423D36EB1004E2DE9 /* SearchServiceType.swift in Sources */,
@@ -361,7 +381,10 @@
 				4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */,
 				4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */,
 				4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */,
+				4E638AC823F891C8004E7E09 /* HttpNetworkType.swift in Sources */,
+				4E638AC723F891C8004E7E09 /* NetworkManager.swift in Sources */,
 				4E550F8223C3DEAF00B0463A /* Coordinator.swift in Sources */,
+				4E638AC923F891C8004E7E09 /* NetworkEnum.swift in Sources */,
 				4E550F8A23C3EBA100B0463A /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +397,6 @@
 				4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */,
 				4EDC42C723CFB36900AA4D82 /* StopPoint.swift in Sources */,
 				4EDC42C623CFB24B00AA4D82 /* SearchResult.swift in Sources */,
-				4EDC42C323CFB1CF00AA4D82 /* NetworkManager.swift in Sources */,
 				4EDC42C423CFB1D100AA4D82 /* SearchService.swift in Sources */,
 				4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */,
 				4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */,

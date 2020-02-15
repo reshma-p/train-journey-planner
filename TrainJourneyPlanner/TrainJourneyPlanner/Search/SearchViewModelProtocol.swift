@@ -19,7 +19,7 @@ protocol SearchViewModelType {
 /// Defines the  protocol for the delegate to handle the updates from the SearchViewModelType
 protocol SearchViewModelViewDelegate: class {
     
-    func showResult(_ searchResult: SearchResult)
+    func showResult(_ stopPoints: [StopPoint])
     func showErrorAlert(_ error: String)
     
 }

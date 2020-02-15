@@ -21,7 +21,6 @@ class SearchViewModel: SearchViewModelType {
     
     
     // MARK: Member functions
-    
     func onSourceTextValueChange(textValue: String) {
         if(textValue.count >= 3){
             searchService.fetchStopPoints(searchString: textValue, delegate: self)
@@ -32,8 +31,8 @@ class SearchViewModel: SearchViewModelType {
 
 // MARK: Extension : SearchDelegate
 extension SearchViewModel: SearchDelegate{
-    func onSuccess(searchResult: SearchResult) {
-        viewDelegate?.showResult(searchResult)
+    func onSuccess(stopPoints: [StopPoint]) {
+        viewDelegate?.showResult(stopPoints)
     }
     
     func onFailure(error: NetworkError) {

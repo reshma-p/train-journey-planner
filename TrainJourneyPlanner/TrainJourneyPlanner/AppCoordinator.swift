@@ -22,6 +22,7 @@ class AppCoordinator: Coordinator {
     //MARK: Initialiser
     init(window: UIWindow?) {
         self.window = window
+        
     }
     
     //MARK: Coordinator implementation
@@ -36,7 +37,7 @@ class AppCoordinator: Coordinator {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         
-        var searchCoordinator = SearchCoordinator(rootViewController: rootViewController, rootNavigationController: rootNavigationController)
+        let searchCoordinator = SearchCoordinator(rootViewController: rootViewController, rootNavigationController: rootNavigationController)
         self.addChildCoordinator(searchCoordinator)
         searchCoordinator.start()
     }

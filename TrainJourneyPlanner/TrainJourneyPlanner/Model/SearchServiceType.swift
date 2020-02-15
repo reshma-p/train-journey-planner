@@ -11,11 +11,12 @@ import Foundation
 
 /// The protocol for the Search Service.
 protocol SearchServiceType{
+    
     func fetchStopPoints<T:SearchDelegate>(searchString: String, delegate: T)
 }
 
 /// The protocol for the Post delegate.
-protocol SearchDelegate{
-    func onSuccess(searchResult: SearchResult)
+protocol SearchDelegate {
+    func onSuccess(stopPoints: [StopPoint])
     func onFailure(error: NetworkError)
 }
