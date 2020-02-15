@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// Datasource for the SearchTable view
-class SearchTableDataSource: NSObject, UITableViewDataSource {
+class SearchTableDataSource: NSObject, RKUITableDataSource {
     
     var data: [StopPoint] = []
     let cellIdentifier = "StopPointsCell"
@@ -30,4 +30,9 @@ class SearchTableDataSource: NSObject, UITableViewDataSource {
         cell.textLabel?.text = data[indexPath.item].name
         return cell
     }
+}
+
+
+protocol RKUITableDataSource: UITableViewDataSource {
+    var cellIdentifier: String { get }
 }

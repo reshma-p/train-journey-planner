@@ -15,26 +15,30 @@ class SearchViewController: UIViewController {
     private(set) var viewModel : SearchViewModelType?
     
     // MARK: UI outlets
-    @IBOutlet weak var sourceTextField: UITextField!
-    @IBOutlet weak var targetTextField: UITextField!
-    @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var sourceTextField: CustomSearchTextField!
+    @IBOutlet weak var targetTextField: CustomSearchTextField!
     
     let searchTableDataSource = SearchTableDataSource()
     
     // MARK: UI Action methods
-    @IBAction func onSourceTextValueChange(_ sender: UITextField) {
+    @IBAction func onSourceTextValueChange(_ sender: CustomSearchTextField) {
         viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
+        sourceTextField.showTable()
+    }
+
+    @IBAction func onTargetTextValueChange(_ sender: CustomSearchTextField) {
+       
     }
     
-    @IBAction func onTargetTextValueChange(_ sender: UITextField) {
-        print("target value : \(sender.text)")
-    }
     
+
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        sourceTextField.setup(dataSource: SearchTableDataSource())
+        targetTextField.setup(dataSource: SearchTableDataSource())
         
-        self.searchTableView.dataSource = searchTableDataSource
+        sourceTextField.delegate = self
     }
     
     // MARK: Member functions
@@ -49,13 +53,26 @@ extension SearchViewController: SearchViewModelViewDelegate {
     
     func showResult(_ stopPoints: [StopPoint]) {
         print(" Matches : \(stopPoints)")
-        self.searchTableDataSource.updateData(data: stopPoints)
-        DispatchQueue.main.async { [weak self] in
-            self?.searchTableView.reloadData()
+        if let dataSource = sourceTextField.dataSource as? SearchTableDataSource {
+            dataSource.updateData(data: stopPoints)
+            DispatchQueue.main.async { [weak self] in
+                self?.sourceTextField.reloadData()
+            }
         }
+       
     }
     
     func showErrorAlert(_ error: String) {
         print(" ERROR : \(error)")
+    }
+}
+
+
+extension SearchViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 }
