@@ -18,26 +18,33 @@ class CustomSearchTextField: UITextField {
         print("Hello nib setup")
     }
     
-    func setupData(dataSource: RKUITableDataSource) {
+    func setupData(dataSource: RKUITableDataSource, delegate: UITableViewDelegate) {
       self.dataSource = dataSource
-      self.createTableView()
+      self.createTableView(delegate)
     }
     
     func onEditingEnd(){
-        tableView.isHidden = false
+        tableView.isHidden = true
     }
     func showResults(){
         tableView.isHidden = false
         updateTableView()
     }
     
-    private func createTableView() {
+    private func createTableView(_ delegate: UITableViewDelegate) {
         if self.tableView == nil, let dataSource = dataSource {
+            
             self.tableView = UITableView(frame: CGRect.zero)
             self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: dataSource.cellIdentifier)
             self.tableView.dataSource = dataSource
+            self.tableView.delegate = delegate
             settingTableViewStyle()
+            
+            self.tableView.isUserInteractionEnabled = true
+            self.tableView.allowsSelection = true
+            
             self.addSubview(tableView)
+            
         }
     }
     

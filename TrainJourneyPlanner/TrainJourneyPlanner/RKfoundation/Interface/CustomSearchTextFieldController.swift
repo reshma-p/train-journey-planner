@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol CustomSearchTextFieldController: class, UITextFieldDelegate  {
+protocol CustomSearchTextFieldController: class, UITextFieldDelegate, UITableViewDelegate {
     
     var textField: CustomSearchTextField? { get }
     
