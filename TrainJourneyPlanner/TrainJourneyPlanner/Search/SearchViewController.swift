@@ -18,16 +18,22 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var sourceTextField: CustomSearchTextField!
     @IBOutlet weak var targetTextField: CustomSearchTextField!
     
+
+    var currentSearch: SearchText?
     let searchTableDataSource = SearchTableDataSource()
     
     // MARK: UI Action methods
     @IBAction func onSourceTextValueChange(_ sender: CustomSearchTextField) {
-        viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
+        currentSearch = SearchText.source
+        viewModel?.onSourceTextValueChange(for: currentSearch!, textValue: sender.text ?? "")
         sourceTextField.showTable()
+        
     }
 
     @IBAction func onTargetTextValueChange(_ sender: CustomSearchTextField) {
-       
+        currentSearch = SearchText.destination
+        viewModel?.onSourceTextValueChange(for: currentSearch!, textValue: sender.text ?? "")
+        targetTextField.showTable()
     }
     
     
@@ -35,10 +41,15 @@ class SearchViewController: UIViewController {
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        sourceTextField.setup(dataSource: SearchTableDataSource())
-        targetTextField.setup(dataSource: SearchTableDataSource())
         
-        sourceTextField.delegate = self
+        setupTextField(textfield: sourceTextField, placeholder: "From")
+        setupTextField(textfield: targetTextField, placeholder: "To")
+    }
+    
+    func setupTextField(textfield: CustomSearchTextField, placeholder: String){
+        textfield.setupData(dataSource: SearchTableDataSource(), tableDelegate: self)
+        textfield.delegate = self
+        textfield.placeholder = placeholder
     }
     
     // MARK: Member functions
@@ -53,12 +64,27 @@ extension SearchViewController: SearchViewModelViewDelegate {
     
     func showResult(_ stopPoints: [StopPoint]) {
         print(" Matches : \(stopPoints)")
-        if let dataSource = sourceTextField.dataSource as? SearchTableDataSource {
-            dataSource.updateData(data: stopPoints)
-            DispatchQueue.main.async { [weak self] in
-                self?.sourceTextField.reloadData()
-            }
+        
+        switch currentSearch {
+            case .source:
+                if let dataSource = sourceTextField.dataSource as? SearchTableDataSource {
+                    dataSource.updateData(data: stopPoints)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.sourceTextField.reloadData()
+                    }
+                }
+            case .destination:
+                if let dataSource = targetTextField.dataSource as? SearchTableDataSource {
+                    dataSource.updateData(data: stopPoints)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.targetTextField.reloadData()
+                    }
+                }
+            default:
+                
+               return
         }
+        
        
     }
     
@@ -68,11 +94,19 @@ extension SearchViewController: SearchViewModelViewDelegate {
 }
 
 
-extension SearchViewController: UITextFieldDelegate {
+extension SearchViewController: CustomTextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print(" SearchViewController : textFieldShouldReturn")
         textField.resignFirstResponder()
         
         return true
     }
+}
+
+
+enum SearchText: String {
+    
+    case source
+    case destination
 }

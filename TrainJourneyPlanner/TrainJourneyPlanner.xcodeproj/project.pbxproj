@@ -27,6 +27,8 @@
 		4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE602232AF4A100DD81DB /* StopPoint.swift */; };
 		4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE603232AF4A100DD81DB /* SearchResult.swift */; };
 		4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
+		4EC4ECFC23F9932B0037B84E /* CustomSearchTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */; };
+		4EC4ECFD23F9932B0037B84E /* CustomSearchTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */; };
 		4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */; };
 		4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA32DB23CE883800674664 /* SearchViewModel.swift */; };
 		4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10620D23C68F3600A732E4 /* SearchViewController.swift */; };
@@ -72,6 +74,7 @@
 		4EBFE602232AF4A100DD81DB /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		4EBFE603232AF4A100DD81DB /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		4EBFE606232AF64E00DD81DB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextFieldController.swift; sourceTree = "<group>"; };
 		4EDC42B123CFAF5400AA4D82 /* TrainJourneyPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainJourneyPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDC42B523CFAF5400AA4D82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModelTest.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				4E638ACF23F89BEC004E7E09 /* CustomSearchTextField.swift */,
+				4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -394,6 +398,7 @@
 				4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */,
 				4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */,
 				4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */,
+				4EC4ECFC23F9932B0037B84E /* CustomSearchTextFieldController.swift in Sources */,
 				4E638AC823F891C8004E7E09 /* HttpNetworkType.swift in Sources */,
 				4E638AC723F891C8004E7E09 /* NetworkManager.swift in Sources */,
 				4E550F8223C3DEAF00B0463A /* Coordinator.swift in Sources */,
@@ -406,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC4ECFD23F9932B0037B84E /* CustomSearchTextFieldController.swift in Sources */,
 				4EDC42C223CFB1BE00AA4D82 /* SearchCoordinator.swift in Sources */,
 				4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */,
 				4EDC42C723CFB36900AA4D82 /* StopPoint.swift in Sources */,

@@ -10,8 +10,9 @@ import UIKit
 
 class CustomSearchTextField: UITextField {
 
-    var tableView: UITableView!
+    private var tableView: UITableView!
     var dataSource: RKUITableDataSource?
+    private weak var tableDelegate: UITableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,14 +23,23 @@ class CustomSearchTextField: UITextField {
     }
     
     @objc func textEditingEnd() {
+        print(" CustomSearchTextField : textEditingEnd")
         tableView.isHidden = true
     }
+    
+    func setupData(dataSource: RKUITableDataSource, tableDelegate: UITableViewDelegate) {
+          self.dataSource = dataSource
+          self.tableDelegate = tableDelegate
+          buildTableView()
+      }
+    
     
     func buildTableView() {
         if let tableView = tableView, let dataSource = dataSource{
             
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: dataSource.cellIdentifier)
             tableView.dataSource = dataSource
+            tableView.delegate = tableDelegate
             self.addSubview(tableView)
         } else {
             tableView = UITableView(frame: CGRect.zero)
@@ -82,14 +92,16 @@ class CustomSearchTextField: UITextField {
         updateTableView()
     }
     
-    func setup(dataSource: RKUITableDataSource) {
-        self.dataSource = dataSource
-        buildTableView()
-    }
+  
 
     
     func reloadData() {
         updateTableView()
     }
+    
+}
+
+
+protocol CustomTextFieldDelegate: UITextFieldDelegate, UITableViewDelegate {
     
 }

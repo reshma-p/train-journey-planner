@@ -13,7 +13,7 @@ protocol SearchViewModelType {
     var viewDelegate: SearchViewModelViewDelegate? { get set }
     
     // MARK: Events
-    func onSourceTextValueChange(textValue: String)
+    func onSourceTextValueChange(for currentSearch: SearchText, textValue: String)
 }
 
 /// Defines the  protocol for the delegate to handle the updates from the SearchViewModelType

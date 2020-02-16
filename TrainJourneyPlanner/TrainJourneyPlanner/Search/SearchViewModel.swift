@@ -21,7 +21,7 @@ class SearchViewModel: SearchViewModelType {
     
     
     // MARK: Member functions
-    func onSourceTextValueChange(textValue: String) {
+    func onSourceTextValueChange(for currentSearch: SearchText, textValue: String) {
         if(textValue.count >= 3){
             searchService.fetchStopPoints(searchString: textValue, delegate: self)
         }

@@ -39,7 +39,8 @@ extension HttpRequest {
     
     func getUrlRequest(baseUrl: String) -> URLRequest? {
         
-        if let url = URL(string: (baseUrl + self.endPoint)) {
+        var urlString = (baseUrl + self.endPoint).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let url = URL(string: urlString ?? "") {
             var urlRequest = URLRequest(url: url)
             
             /// Setting the headers
