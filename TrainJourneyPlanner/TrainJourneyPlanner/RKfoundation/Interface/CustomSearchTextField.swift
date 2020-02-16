@@ -38,11 +38,8 @@ class CustomSearchTextField: UITextField {
             self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: dataSource.cellIdentifier)
             self.tableView.dataSource = dataSource
             self.tableView.delegate = delegate
+            
             settingTableViewStyle()
-            
-            self.tableView.isUserInteractionEnabled = true
-            self.tableView.allowsSelection = true
-            
             self.addSubview(tableView)
             
         }
@@ -53,7 +50,7 @@ class CustomSearchTextField: UITextField {
         tableView.layer.masksToBounds = true
         tableView.separatorInset = UIEdgeInsets.zero
         tableView.layer.cornerRadius = 5.0
-        tableView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        tableView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     }
     
     
@@ -86,9 +83,4 @@ class CustomSearchTextField: UITextField {
             tableView.reloadData()
         }
     }
-    
-    
-    
-    
-    
 }

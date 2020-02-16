@@ -27,7 +27,7 @@ class SearchTableDataSource: NSObject, RKUITableDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) else {
             fatalError("No cell class has been registered for \(cellIdentifier)")
         }
-        cell.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        cell.backgroundColor = UIColor.clear
         cell.textLabel?.text = data[indexPath.item].name
         return cell
     }

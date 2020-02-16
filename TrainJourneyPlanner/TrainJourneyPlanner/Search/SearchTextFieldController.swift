@@ -57,7 +57,6 @@ extension SearchTextFieldController {
     func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
 }
 
 
@@ -76,6 +75,8 @@ extension SearchTextFieldController {
             viewModel?.onTextValueChange(textValue: value)
         }
     }
+    
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         print(" calling for textFieldDidEndEditing - \(textField.tag)")
         self.textField?.onEditingEnd()
