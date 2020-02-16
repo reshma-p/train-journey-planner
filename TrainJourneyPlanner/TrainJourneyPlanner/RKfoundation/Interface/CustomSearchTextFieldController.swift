@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-protocol CustomSearchTextFieldController: class {
+protocol CustomSearchTextFieldController: class, UITextFieldDelegate  {
     
-    var textField: CustomSearchTextField { get }
+    var textField: CustomSearchTextField? { get }
     
     init(textField: CustomSearchTextField)
     
-    var dataSource: RKUITableDataSource { get }
+    var dataSource: RKUITableDataSource? { get }
     
-    
+    func reloadData()
 }
+
+

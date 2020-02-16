@@ -12,44 +12,47 @@ class CustomSearchTextField: UITextField {
 
     private var tableView: UITableView!
     var dataSource: RKUITableDataSource?
-    private weak var tableDelegate: UITableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         print("Hello nib setup")
-        buildTableView()
-        
-        self.addTarget(self, action: #selector(self.textEditingEnd), for: .editingDidEnd)
     }
     
-    @objc func textEditingEnd() {
-        print(" CustomSearchTextField : textEditingEnd")
-        tableView.isHidden = true
+    func setupData(dataSource: RKUITableDataSource) {
+      self.dataSource = dataSource
+      self.createTableView()
     }
     
-    func setupData(dataSource: RKUITableDataSource, tableDelegate: UITableViewDelegate) {
-          self.dataSource = dataSource
-          self.tableDelegate = tableDelegate
-          buildTableView()
-      }
+    func onEditingEnd(){
+        tableView.isHidden = false
+    }
+    func showResults(){
+        tableView.isHidden = false
+        updateTableView()
+    }
     
-    
-    func buildTableView() {
-        if let tableView = tableView, let dataSource = dataSource{
-            
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: dataSource.cellIdentifier)
-            tableView.dataSource = dataSource
-            tableView.delegate = tableDelegate
+    private func createTableView() {
+        if self.tableView == nil, let dataSource = dataSource {
+            self.tableView = UITableView(frame: CGRect.zero)
+            self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: dataSource.cellIdentifier)
+            self.tableView.dataSource = dataSource
+            settingTableViewStyle()
             self.addSubview(tableView)
-        } else {
-            tableView = UITableView(frame: CGRect.zero)
         }
+    }
+    
+    private func settingTableViewStyle() {
+        //Setting tableView style
+        tableView.layer.masksToBounds = true
+        tableView.separatorInset = UIEdgeInsets.zero
+        tableView.layer.cornerRadius = 5.0
+        tableView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
     }
     
     
     func updateTableView() {
         if let tableView = tableView {
-            self.bringSubviewToFront(tableView)
+            
             var tableHeight: CGFloat = 0
             tableHeight = tableView.contentSize.height
             
@@ -64,12 +67,11 @@ class CustomSearchTextField: UITextField {
             tableViewFrame.origin.x = 0
             tableViewFrame.origin.y = frame.size.height + 2
             
-            
-            
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.tableView?.frame = tableViewFrame
             })
             
+            self.bringSubviewToFront(tableView)
             if self.isFirstResponder {
                 superview?.bringSubviewToFront(self)
             }
@@ -78,30 +80,8 @@ class CustomSearchTextField: UITextField {
         }
     }
     
-    func settingTableViewStyle() {
-        //Setting tableView style
-        tableView.layer.masksToBounds = true
-        tableView.separatorInset = UIEdgeInsets.zero
-        tableView.layer.cornerRadius = 5.0
-        
-        tableView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
-    }
     
-    func showTable(){
-        tableView.isHidden = false
-        updateTableView()
-    }
     
-  
-
     
-    func reloadData() {
-        updateTableView()
-    }
-    
-}
-
-
-protocol CustomTextFieldDelegate: UITextFieldDelegate, UITableViewDelegate {
     
 }

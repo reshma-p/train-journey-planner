@@ -18,89 +18,42 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var sourceTextField: CustomSearchTextField!
     @IBOutlet weak var targetTextField: CustomSearchTextField!
     
+    var sourceFieldManager: SearchTextFieldController?
+    var targetFieldManager: SearchTextFieldController?
+    
 
     var currentSearch: SearchText?
     let searchTableDataSource = SearchTableDataSource()
-    
-    // MARK: UI Action methods
-    @IBAction func onSourceTextValueChange(_ sender: CustomSearchTextField) {
-        currentSearch = SearchText.source
-        viewModel?.onSourceTextValueChange(for: currentSearch!, textValue: sender.text ?? "")
-        sourceTextField.showTable()
-        
-    }
 
-    @IBAction func onTargetTextValueChange(_ sender: CustomSearchTextField) {
-        currentSearch = SearchText.destination
-        viewModel?.onSourceTextValueChange(for: currentSearch!, textValue: sender.text ?? "")
-        targetTextField.showTable()
-    }
     
     
 
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTextField(textfield: sourceTextField, placeholder: "From")
-        setupTextField(textfield: targetTextField, placeholder: "To")
+        setupOnLoad()
     }
     
-    func setupTextField(textfield: CustomSearchTextField, placeholder: String){
-        textfield.setupData(dataSource: SearchTableDataSource(), tableDelegate: self)
-        textfield.delegate = self
-        textfield.placeholder = placeholder
+    func setupOnLoad(){
+        
+        guard let searchService = viewModel?.searchService else {
+            return
+        }
+        
+        sourceFieldManager = SearchTextFieldController(textField: sourceTextField)
+        sourceFieldManager!.setup(searchViewModel: SearchViewModel(searchService: searchService), dataSource: SearchTableDataSource())
+        
+        targetFieldManager = SearchTextFieldController(textField: targetTextField)
+        targetFieldManager!.setup(searchViewModel: SearchViewModel(searchService: searchService), dataSource: SearchTableDataSource())
+        
+        sourceFieldManager!.setupTextField(placeholder: "From")
+        targetFieldManager!.setupTextField(placeholder: "To")
+        
     }
     
     // MARK: Member functions
     func setup(with viewModel: SearchViewModelType) {
         self.viewModel = viewModel
-        self.viewModel?.viewDelegate = self
-    }
-}
-
-// MARK: Extension : SearchViewModelViewDelegate
-extension SearchViewController: SearchViewModelViewDelegate {
-    
-    func showResult(_ stopPoints: [StopPoint]) {
-        print(" Matches : \(stopPoints)")
-        
-        switch currentSearch {
-            case .source:
-                if let dataSource = sourceTextField.dataSource as? SearchTableDataSource {
-                    dataSource.updateData(data: stopPoints)
-                    DispatchQueue.main.async { [weak self] in
-                        self?.sourceTextField.reloadData()
-                    }
-                }
-            case .destination:
-                if let dataSource = targetTextField.dataSource as? SearchTableDataSource {
-                    dataSource.updateData(data: stopPoints)
-                    DispatchQueue.main.async { [weak self] in
-                        self?.targetTextField.reloadData()
-                    }
-                }
-            default:
-                
-               return
-        }
-        
-       
-    }
-    
-    func showErrorAlert(_ error: String) {
-        print(" ERROR : \(error)")
-    }
-}
-
-
-extension SearchViewController: CustomTextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print(" SearchViewController : textFieldShouldReturn")
-        textField.resignFirstResponder()
-        
-        return true
     }
 }
 

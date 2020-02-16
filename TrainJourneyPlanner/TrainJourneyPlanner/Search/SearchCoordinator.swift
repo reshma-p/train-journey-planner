@@ -15,31 +15,30 @@ class SearchCoordinator: Coordinator, Scene {
     // MARK: Static properties
     static var storyboard: UIStoryboard = UIStoryboard(name: "Search", bundle: Bundle.main)
     
-    static var initialViewController: UIViewController? {
-        return storyboard.instantiateInitialViewController()
-    }
+//    static var initialViewController: UIViewController? {
+//        return storyboard.instantiateInitialViewController()
+//    }
     
-    init(rootViewController: UIViewController, rootNavigationController: UINavigationController){
-        self.rootViewController = rootViewController
-        self.rootNavigationController = rootNavigationController
-        
+    init(navigationController: UINavigationController){
+        self.rootViewController = navigationController
     }
     
     // MARK: Coordinator implementation
-    var rootNavigationController: UINavigationController
-    var rootViewController: UIViewController
+    var rootViewController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
     
     func start() {
-        guard let viewController = rootViewController as? SearchViewController else {
-            assertionFailure("Attempt to start the SearchCoordinator with incorrect rootViewController => \(rootViewController)")
+        guard let viewController = SearchCoordinator.storyboard.instantiateInitialViewController() as? SearchViewController else {
+            assertionFailure("Attempt to start the SearchCoordinator with incorrect rootViewController =>")
             return
         }
         
         let searchService = SearchService(networkManager: NetworkManager())
         let searchViewModel = SearchViewModel(searchService: searchService)
         viewController.setup(with: searchViewModel)
+        
+        rootViewController.pushViewController(viewController, animated: true)
     }
     
     func finish() {

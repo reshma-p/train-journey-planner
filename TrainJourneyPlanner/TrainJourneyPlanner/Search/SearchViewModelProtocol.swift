@@ -11,9 +11,12 @@ import Foundation
 /// Defines the protocol for the ViewModel in the Search feature
 protocol SearchViewModelType {
     var viewDelegate: SearchViewModelViewDelegate? { get set }
+    var searchService: SearchServiceType { get }
     
     // MARK: Events
-    func onSourceTextValueChange(for currentSearch: SearchText, textValue: String)
+    func onTextValueChange(textValue: String)
+    
+    
 }
 
 /// Defines the  protocol for the delegate to handle the updates from the SearchViewModelType

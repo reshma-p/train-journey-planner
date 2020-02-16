@@ -26,9 +26,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="onSourceTextValueChange:" destination="1c0-Yn-AXM" eventType="editingChanged" id="4Ck-jw-BML"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5k-ag-0k6" customClass="CustomSearchTextField" customModule="TrainJourneyPlanner" customModuleProvider="target">
                                         <rect key="frame" x="5" y="90" width="385" height="40"/>
@@ -37,9 +34,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="onTargetTextValueChange:" destination="1c0-Yn-AXM" eventType="editingChanged" id="sK8-2t-B4h"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

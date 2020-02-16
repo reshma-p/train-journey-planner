@@ -9,9 +9,10 @@
 import Foundation
 
 class SearchViewModel: SearchViewModelType {
-    
+
+
     // MARK: Properties
-    private(set) var searchService : SearchServiceType
+    var searchService: SearchServiceType
     weak var viewDelegate: SearchViewModelViewDelegate?
     
     // MARK: Initialiser
@@ -21,7 +22,7 @@ class SearchViewModel: SearchViewModelType {
     
     
     // MARK: Member functions
-    func onSourceTextValueChange(for currentSearch: SearchText, textValue: String) {
+    func onTextValueChange(textValue: String) {
         if(textValue.count >= 3){
             searchService.fetchStopPoints(searchString: textValue, delegate: self)
         }

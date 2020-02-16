@@ -29,6 +29,8 @@
 		4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE606232AF64E00DD81DB /* SearchService.swift */; };
 		4EC4ECFC23F9932B0037B84E /* CustomSearchTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */; };
 		4EC4ECFD23F9932B0037B84E /* CustomSearchTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */; };
+		4EC4ECFF23F9AA500037B84E /* SearchTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4ECFE23F9AA500037B84E /* SearchTextFieldController.swift */; };
+		4EC4ED0023F9AA500037B84E /* SearchTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4ECFE23F9AA500037B84E /* SearchTextFieldController.swift */; };
 		4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */; };
 		4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA32DB23CE883800674664 /* SearchViewModel.swift */; };
 		4EDC42C123CFB1BB00AA4D82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10620D23C68F3600A732E4 /* SearchViewController.swift */; };
@@ -75,6 +77,7 @@
 		4EBFE603232AF4A100DD81DB /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		4EBFE606232AF64E00DD81DB /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		4EC4ECFB23F9932B0037B84E /* CustomSearchTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextFieldController.swift; sourceTree = "<group>"; };
+		4EC4ECFE23F9AA500037B84E /* SearchTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldController.swift; sourceTree = "<group>"; };
 		4EDC42B123CFAF5400AA4D82 /* TrainJourneyPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainJourneyPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDC42B523CFAF5400AA4D82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EDC42BE23CFB12D00AA4D82 /* SearchViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModelTest.swift; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				4EEA32DB23CE883800674664 /* SearchViewModel.swift */,
 				4E22AFE123D36D8C004E2DE9 /* SearchViewModelProtocol.swift */,
 				4E22AFE523D36FD1004E2DE9 /* SearchTableDataSource.swift */,
+				4EC4ECFE23F9AA500037B84E /* SearchTextFieldController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -387,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E22AFE223D36D8C004E2DE9 /* SearchViewModelProtocol.swift in Sources */,
+				4EC4ECFF23F9AA500037B84E /* SearchTextFieldController.swift in Sources */,
 				4EEA32DC23CE883800674664 /* SearchViewModel.swift in Sources */,
 				4E22AFE623D36FD1004E2DE9 /* SearchTableDataSource.swift in Sources */,
 				4E10620E23C68F3600A732E4 /* SearchViewController.swift in Sources */,
@@ -418,6 +423,7 @@
 				4E638AD123F89BEC004E7E09 /* CustomSearchTextField.swift in Sources */,
 				4EDC42C623CFB24B00AA4D82 /* SearchResult.swift in Sources */,
 				4EDC42C423CFB1D100AA4D82 /* SearchService.swift in Sources */,
+				4EC4ED0023F9AA500037B84E /* SearchTextFieldController.swift in Sources */,
 				4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */,
 				4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */,
 				4EDC42C523CFB1D900AA4D82 /* AppCoordinator.swift in Sources */,
