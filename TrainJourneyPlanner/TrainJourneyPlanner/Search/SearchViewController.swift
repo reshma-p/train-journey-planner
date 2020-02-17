@@ -15,26 +15,24 @@ class SearchViewController: UIViewController {
     private(set) var viewModel : SearchViewModelType?
     
     // MARK: UI outlets
-    @IBOutlet weak var sourceTextField: UITextField!
-    @IBOutlet weak var targetTextField: UITextField!
-    @IBOutlet weak var searchTableView: UITableView!
+
     
     let searchTableDataSource = SearchTableDataSource()
     
     // MARK: UI Action methods
-    @IBAction func onSourceTextValueChange(_ sender: UITextField) {
-        viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
-    }
-    
-    @IBAction func onTargetTextValueChange(_ sender: UITextField) {
-        print("target value : \(sender.text)")
-    }
-    
+//    @IBAction func onSourceTextValueChange(_ sender: UITextField) {
+//        viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
+//    }
+//
+//    @IBAction func onTargetTextValueChange(_ sender: UITextField) {
+//        print("target value : \(sender.text)")
+//    }
+//
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchTableView.dataSource = searchTableDataSource
+//        self.searchTableView.dataSource = searchTableDataSource
     }
     
     // MARK: Member functions
@@ -51,7 +49,7 @@ extension SearchViewController: SearchViewModelViewDelegate {
         print(" Matches : \(stopPoints)")
         self.searchTableDataSource.updateData(data: stopPoints)
         DispatchQueue.main.async { [weak self] in
-            self?.searchTableView.reloadData()
+//            self?.searchTableView.reloadData()
         }
     }
     
