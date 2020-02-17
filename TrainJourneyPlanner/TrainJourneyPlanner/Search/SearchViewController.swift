@@ -15,24 +15,25 @@ class SearchViewController: UIViewController {
     private(set) var viewModel : SearchViewModelType?
     
     // MARK: UI outlets
+    @IBOutlet weak var sourceTextField: UITextField!
+    @IBOutlet weak var targetTextField: UITextField!
 
-    
-    let searchTableDataSource = SearchTableDataSource()
-    
     // MARK: UI Action methods
-//    @IBAction func onSourceTextValueChange(_ sender: UITextField) {
-//        viewModel?.onSourceTextValueChange(textValue: sender.text ?? "")
-//    }
-//
-//    @IBAction func onTargetTextValueChange(_ sender: UITextField) {
-//        print("target value : \(sender.text)")
-//    }
-//
+    @IBAction func onTextFieldEditStart(_ sender: UITextField) {
+        
+        sender.resignFirstResponder()
+        
+        print("Edit called on \(sender.tag)")
+        
+        // Invoke the searchBarview controller
+    }
+    
     // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.searchTableView.dataSource = searchTableDataSource
+        sourceTextField.tag = SearchTextFieldTags.source.rawValue
+        targetTextField.tag = SearchTextFieldTags.target.rawValue
     }
     
     // MARK: Member functions
@@ -44,17 +45,22 @@ class SearchViewController: UIViewController {
 }
 
 // MARK: Extension : SearchViewModelViewDelegate
-extension SearchViewController: SearchViewModelViewDelegate {
-    
-    func showResult(_ stopPoints: [StopPoint]) {
-        print(" Matches : \(stopPoints)")
-        self.searchTableDataSource.updateData(data: stopPoints)
-        DispatchQueue.main.async { [weak self] in
-//            self?.searchTableView.reloadData()
-        }
-    }
-    
-    func showErrorAlert(_ error: String) {
-        print(" ERROR : \(error)")
-    }
+//extension SearchViewController: SearchViewModelViewDelegate {
+//    
+//    func showResult(_ stopPoints: [StopPoint]) {
+//        print(" Matches : \(stopPoints)")
+//        self.searchTableDataSource.updateData(data: stopPoints)
+//        DispatchQueue.main.async { [weak self] in
+////            self?.searchTableView.reloadData()
+//        }
+//    }
+//    
+//    func showErrorAlert(_ error: String) {
+//        print(" ERROR : \(error)")
+//    }
+//}
+
+enum SearchTextFieldTags: Int{
+    case source = 1
+    case target = 2
 }

@@ -19,13 +19,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwE-3C-ba4">
                                 <rect key="frame" x="9" y="244" width="395" height="140"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-8T-3NF">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-8T-3NF">
                                         <rect key="frame" x="5" y="10" width="385" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="EhG-Ah-Y02"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onTextFieldEditStart:" destination="1c0-Yn-AXM" eventType="editingDidBegin" id="9fS-9a-j0t"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5k-ag-0k6">
                                         <rect key="frame" x="5" y="90" width="385" height="40"/>
@@ -34,6 +37,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onTextFieldEditStart:" destination="1c0-Yn-AXM" eventType="editingDidEnd" id="0Xg-s9-DKX"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,6 +73,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L6j-nK-dpM"/>
                     </view>
+                    <connections>
+                        <outlet property="sourceTextField" destination="LKe-8T-3NF" id="0Oz-yb-o1g"/>
+                        <outlet property="targetTextField" destination="p5k-ag-0k6" id="HB0-rT-uDq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZZ-4r-CR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -30,13 +30,13 @@ class SearchCoordinator: Coordinator, Scene {
     func start() {
        
         guard let viewController = SearchCoordinator.storyboard.instantiateInitialViewController() as? SearchViewController else {
+            fatalError("Search coordinator started with InitialViewController which is not SearchViewController ")
             return
         }
         
         let viewModel = SearchViewModel(searchService: SearchService(networkManager: NetworkManager()))
         viewModel.viewDelegate = viewController
         viewController.setup(with: viewModel)
-        
         
         rootNavigationController.pushViewController(viewController, animated: true)
     }
