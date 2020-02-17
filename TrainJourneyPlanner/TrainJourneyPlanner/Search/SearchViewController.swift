@@ -39,6 +39,7 @@ class SearchViewController: UIViewController {
     func setup(with viewModel: SearchViewModelType) {
         self.viewModel = viewModel
         self.viewModel?.viewDelegate = self
+        self.title = "Journey Planner"
     }
 }
 

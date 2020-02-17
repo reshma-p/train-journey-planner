@@ -14,15 +14,12 @@ class AppCoordinator: Coordinator {
     
     //MARK: Properties
     var window: UIWindow?
-    
-    lazy var rootNavigationController: UINavigationController = {
-        return UINavigationController(rootViewController: UIViewController())
-    }()
+    var rootViewController: UINavigationController
     
     //MARK: Initialiser
     init(window: UIWindow?) {
         self.window = window
-        
+        rootViewController = UINavigationController()
     }
     
     //MARK: Coordinator implementation
@@ -30,14 +27,14 @@ class AppCoordinator: Coordinator {
     
     func start() {
     
-        guard let window = window, let rootViewController = SearchCoordinator.initialViewController else {
+        guard let window = window else {
             return
         }
         
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         
-        let searchCoordinator = SearchCoordinator(rootViewController: rootViewController, rootNavigationController: rootNavigationController)
+        let searchCoordinator = SearchCoordinator(rootNavigationController: rootViewController)
         self.addChildCoordinator(searchCoordinator)
         searchCoordinator.start()
     }

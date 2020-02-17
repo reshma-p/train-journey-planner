@@ -105,6 +105,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4E19BD4323FB45430010CC12 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */,
+				4E550F8423C3DF1100B0463A /* AppCoordinator.swift */,
+				4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		4E550F8023C3DE9500B0463A /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,15 +179,13 @@
 		4EBFE5EA232AEE9900DD81DB /* TrainJourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				4E19BD4323FB45430010CC12 /* Core */,
 				4E638AC223F89142004E7E09 /* RKfoundation */,
 				4E550F8623C3E9C900B0463A /* Search */,
 				4EBFE601232AF49600DD81DB /* DTOs */,
 				4EBFE5FD232AF41700DD81DB /* Model */,
-				4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */,
 				4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */,
-				4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */,
 				4EBFE5F7232AEE9900DD81DB /* Info.plist */,
-				4E550F8423C3DF1100B0463A /* AppCoordinator.swift */,
 			);
 			path = TrainJourneyPlanner;
 			sourceTree = "<group>";
