@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
         print("Edit called on \(sender.tag)")
         
         // Invoke the searchBarview controller
+        
     }
     
     // MARK: Lifecycle methods
@@ -45,20 +46,9 @@ class SearchViewController: UIViewController {
 }
 
 // MARK: Extension : SearchViewModelViewDelegate
-//extension SearchViewController: SearchViewModelViewDelegate {
-//    
-//    func showResult(_ stopPoints: [StopPoint]) {
-//        print(" Matches : \(stopPoints)")
-//        self.searchTableDataSource.updateData(data: stopPoints)
-//        DispatchQueue.main.async { [weak self] in
-////            self?.searchTableView.reloadData()
-//        }
-//    }
-//    
-//    func showErrorAlert(_ error: String) {
-//        print(" ERROR : \(error)")
-//    }
-//}
+extension SearchViewController: SearchViewModelViewDelegate {
+  
+}
 
 enum SearchTextFieldTags: Int{
     case source = 1

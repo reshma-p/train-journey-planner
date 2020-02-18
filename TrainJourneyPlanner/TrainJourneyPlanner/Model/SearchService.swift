@@ -49,7 +49,7 @@ struct StopPointSeachRequest: HttpRequest {
     
     var type: RequestType = RequestType.GET
     
-    var endPoint: String = "/StopPoint/Search/{searchString}"
+    var endPoint: String = "/StopPoint/Search/{searchString}?modes=national-rail,tube,bus,overground"
     
     var headers: [String : String] = [:]
     

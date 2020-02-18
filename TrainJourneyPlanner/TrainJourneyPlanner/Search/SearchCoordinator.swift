@@ -34,7 +34,7 @@ class SearchCoordinator: Coordinator, Scene {
             return
         }
         
-        let viewModel = SearchViewModel(searchService: SearchService(networkManager: NetworkManager()))
+        let viewModel = SearchViewModel(searchService: SearchService(networkManager: NetworkManager()),stopPointViewModelType: StopPointSearchViewModel.Type)
         viewModel.viewDelegate = viewController
         viewController.setup(with: viewModel)
         

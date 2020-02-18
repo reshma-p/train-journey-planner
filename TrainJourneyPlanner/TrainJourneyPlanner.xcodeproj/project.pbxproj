@@ -16,11 +16,12 @@
 		4E550F8823C3E9E400B0463A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E550F8723C3E9E300B0463A /* Search.storyboard */; };
 		4E550F8A23C3EBA100B0463A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8923C3EBA100B0463A /* Scene.swift */; };
 		4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */; };
+		4E5778E723FC380400A8DBCC /* StopPointSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5778E623FC380400A8DBCC /* StopPointSearchViewModel.swift */; };
 		4E638AC723F891C8004E7E09 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC423F891C8004E7E09 /* NetworkManager.swift */; };
 		4E638AC823F891C8004E7E09 /* HttpNetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */; };
 		4E638AC923F891C8004E7E09 /* NetworkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638AC623F891C8004E7E09 /* NetworkEnum.swift */; };
-		4E7312C523FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7312C423FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift */; };
-		4E7312C623FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7312C423FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift */; };
+		4E7312C523FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7312C423FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift */; };
+		4E7312C623FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7312C423FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift */; };
 		4EBFE5EC232AEE9900DD81DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */; };
 		4EBFE5F3232AEE9900DD81DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */; };
 		4EBFE5F6232AEE9900DD81DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFE5F4232AEE9900DD81DB /* LaunchScreen.storyboard */; };
@@ -60,10 +61,11 @@
 		4E550F8723C3E9E300B0463A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4E550F8923C3EBA100B0463A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		4E550F8B23C3EC1300B0463A /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		4E5778E623FC380400A8DBCC /* StopPointSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPointSearchViewModel.swift; sourceTree = "<group>"; };
 		4E638AC423F891C8004E7E09 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4E638AC523F891C8004E7E09 /* HttpNetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNetworkType.swift; sourceTree = "<group>"; };
 		4E638AC623F891C8004E7E09 /* NetworkEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnum.swift; sourceTree = "<group>"; };
-		4E7312C423FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStopPointsViewModelProtocol.swift; sourceTree = "<group>"; };
+		4E7312C423FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPointSearchViewModelProtocol.swift; sourceTree = "<group>"; };
 		4EBFE5E8232AEE9900DD81DB /* TrainJourneyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainJourneyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBFE5EB232AEE9900DD81DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EBFE5F2232AEE9900DD81DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,7 +164,8 @@
 		4E7312C323FB52EB007FD7D6 /* Search Stop Points */ = {
 			isa = PBXGroup;
 			children = (
-				4E7312C423FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift */,
+				4E7312C423FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift */,
+				4E5778E623FC380400A8DBCC /* StopPointSearchViewModel.swift */,
 			);
 			path = "Search Stop Points";
 			sourceTree = "<group>";
@@ -397,7 +400,8 @@
 				4E22AFE423D36EB1004E2DE9 /* SearchServiceType.swift in Sources */,
 				4EBFE605232AF4A100DD81DB /* SearchResult.swift in Sources */,
 				4EBFE607232AF64E00DD81DB /* SearchService.swift in Sources */,
-				4E7312C523FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift in Sources */,
+				4E5778E723FC380400A8DBCC /* StopPointSearchViewModel.swift in Sources */,
+				4E7312C523FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift in Sources */,
 				4E550F8523C3DF1100B0463A /* AppCoordinator.swift in Sources */,
 				4EBFE604232AF4A100DD81DB /* StopPoint.swift in Sources */,
 				4E550F8C23C3EC1300B0463A /* SearchCoordinator.swift in Sources */,
@@ -419,7 +423,7 @@
 				4EDC42C723CFB36900AA4D82 /* StopPoint.swift in Sources */,
 				4EDC42C623CFB24B00AA4D82 /* SearchResult.swift in Sources */,
 				4EDC42C423CFB1D100AA4D82 /* SearchService.swift in Sources */,
-				4E7312C623FB5387007FD7D6 /* SearchStopPointsViewModelProtocol.swift in Sources */,
+				4E7312C623FB5387007FD7D6 /* StopPointSearchViewModelProtocol.swift in Sources */,
 				4EDC42C023CFB1B800AA4D82 /* SearchViewModel.swift in Sources */,
 				4EDC42BF23CFB12D00AA4D82 /* SearchViewModelTest.swift in Sources */,
 				4EDC42C523CFB1D900AA4D82 /* AppCoordinator.swift in Sources */,

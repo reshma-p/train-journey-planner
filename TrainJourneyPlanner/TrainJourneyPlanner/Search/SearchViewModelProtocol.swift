@@ -11,15 +11,16 @@ import Foundation
 /// Defines the protocol for the ViewModel in the Search feature
 protocol SearchViewModelType {
     var viewDelegate: SearchViewModelViewDelegate? { get set }
-    
-    // MARK: Events
-    func onSourceTextValueChange(textValue: String)
+    var stopPointViewModelType: StopPointSearchViewModelType.Type? { get }
+//    
+//    // MARK: Events
+//    func onSourceTextValueChange(textValue: String)
 }
 
 /// Defines the  protocol for the delegate to handle the updates from the SearchViewModelType
 protocol SearchViewModelViewDelegate: class {
     
-    func showResult(_ stopPoints: [StopPoint])
-    func showErrorAlert(_ error: String)
+//    func showResult(_ stopPoints: [StopPoint])
+//    func showErrorAlert(_ error: String)
     
 }
